@@ -214,6 +214,16 @@ example.setStrokeStyle = function (context) {
   });
 };
 
+example.setGlobalAlpha = function (context) {
+  context.setFillStyle('#000000');
+  [1, 0.5, 0.1].forEach(function (item, index) {
+    context.setGlobalAlpha(item)
+    context.beginPath();
+    context.rect(0 + 75*index, 0, 50, 50);
+    context.fill();
+  });
+}
+
 example.setShadow = function (context) {
   context.beginPath();
   context.setShadow(10, 10, 10, 'rgba(0, 0, 0, 199)');

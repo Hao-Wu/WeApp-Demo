@@ -13,10 +13,23 @@ Page({
     methods.forEach(function (method) {
       that[method] = function () {
         example[method](that.context)
+        var actions = that.context.getActions()
+
         wx.drawCanvas({
           canvasId: 'canvas',
-          actions: that.context.getActions()
+          actions: actions
         })
+      }
+    })
+  },
+  toTempFilePath: function () {
+    wx.toTempFilePath({
+      canvasId: 'canvas',
+      success: function (res) {
+        console.log(res)
+      },
+      fail: function (res) {
+        console.log(res)
       }
     })
   }

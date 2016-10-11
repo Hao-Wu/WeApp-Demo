@@ -7,7 +7,7 @@
 }
 .canvas-element {
   width: 100%;
-  height: 250px;
+  height: 400rpx;
 }
 .canvas-buttons {
   padding: 50rpx 50rpx 10rpx;
@@ -22,6 +22,7 @@
   box-sizing: border-box;
 }
 .canvas-button {
+  font-size: 28rpx;
   width: 290rpx;
   margin: 20rpx auto; 
 }

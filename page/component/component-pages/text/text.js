@@ -1,20 +1,21 @@
+var initText = 'this is first line\nthis is second line'
+
 Page({
   data: {
-    initData: 'this is first line\nthis is second line',
-    text: 'this is first line\nthis is second line',
-    extraLine: []
+    text: initText
   },
+  extraLine: [],
   add: function(e) {
-    this.data.extraLine.push('other line')
+    this.extraLine.push('other line')
     this.setData({
-      text: this.data.initData + '\n' + this.data.extraLine.join('\n')
+      text: initText + '\n' + this.extraLine.join('\n')
     })
   },
   remove: function(e) {
-    if (this.data.extraLine.length > 0) {
-      this.data.extraLine.pop()
+    if (this.extraLine.length > 0) {
+      this.extraLine.pop()
       this.setData({
-        text: this.data.initData + '\n' + this.data.extraLine.join('\n')
+        text: initText + '\n' + this.extraLine.join('\n')
       })
     }
   }

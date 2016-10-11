@@ -5,7 +5,7 @@
   </view>
   <view class="page__bd">
     <view class="section section_gap" style="text-align: center;">
-      <audio src="{{current.src}}" poster="{{current.poster}}" name="{{current.name}}" author="{{current.author}}" action="{{audioAction}}" bindplay="audioPlayed" bindtimeupdate="audioTimeUpdated" controls></audio>
+      <audio src="{{current.src}}" poster="{{current.poster}}" name="{{current.name}}" author="{{current.author}}" action="{{audioAction}}" controls></audio>
     </view>
   </view>
 </view>
